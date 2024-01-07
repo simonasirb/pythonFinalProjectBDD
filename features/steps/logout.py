@@ -16,9 +16,9 @@ def step_impl(context):
     context.logout_page.click_logout_button()
 
 
-# @Given('I am on the login page')
-# def step_impl(context):
-#     context.login_page.get_page()
+@Given('I am on the login page')
+def step_impl(context):
+    context.login_page.get_page()
 
 
 # @When('I input a valid username')
