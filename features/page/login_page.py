@@ -29,6 +29,7 @@ class Login_Page:
         login_button.click()
         sleep(5)
 
+
     def get_url(self):
         return self.driver.current_url
 

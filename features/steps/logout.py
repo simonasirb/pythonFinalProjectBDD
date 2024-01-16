@@ -3,7 +3,7 @@ from behave import *
 
 @Given('I am on the main page')
 def step_impl(context):
-    context.logout_page.get_logout_page()
+    context.logout_page.get_page()
 
 
 @When('I click on account button')
@@ -15,22 +15,14 @@ def step_impl(context):
 def step_impl(context):
     context.logout_page.click_logout_button()
 
+@When ('I confirm logout')
+def step_impl(context):
+    context.logout_page.click_confirm_logout()
 
-# @Given('I am on the login page')
-# def step_impl(context):
-#     context.login_page.get_page()
+@Then ('I am on the login page')
+def step_impl(context):
+    assert context.logout_page.get_url() == 'https://jules.app/sign-in'
 
 
-# @When('I input a valid username')
-# def step_impl(context):
-#     context.login_page.input_username('simonasirb@outlook.com')
-#
-#
-# @When('I input a valid password')
-# def step_impl(context):
-#     context.login_page.input_password('FPTest1!')
-#
-#
-# @When('I click on login button')
-# def step_impl(context):
-#     context.login_page.click_login_button()
+
+
