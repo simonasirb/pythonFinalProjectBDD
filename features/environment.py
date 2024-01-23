@@ -1,6 +1,6 @@
 from features.browser import Browser
-from features.page.login_page import Login_Page
-from features.page.logout_page import Logout_Page
+from page.login_page import Login_Page
+from page.logout_page import Logout_Page
 
 
 def before_all(context):
