@@ -6,6 +6,8 @@ class Login_Page:
     USERNAME_SELECTOR = (By.CSS_SELECTOR, 'input[placeholder="Enter your email"]')
     PASSWORD_SELECTOR = (By.CSS_SELECTOR, 'input[placeholder="Enter your password"]')
     LOGIN_BUTTON_SELECTOR = (By.CSS_SELECTOR, 'button[data-test-id="login-button"]')
+    POPUP_CANCEL_BUTTON = (By.CSS_SELECTOR, 'button[id="onesignal-slidedown-cancel-button"]')
+
 
     def __init__(self, browser):
         self.driver = browser.driver
@@ -28,8 +30,13 @@ class Login_Page:
         sleep(5)
 
 
-
-
     def get_url(self):
         return self.driver.current_url
 
+
+    def click_cancel_button(self):
+        cancel_button = self.driver.find_element(*self.POPUP_CANCEL_BUTTON)
+        check_cancel_button = cancel_button.is_displayed()
+        if check_cancel_button is True:
+            cancel_button.click()
+        sleep(5)

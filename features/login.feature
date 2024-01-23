@@ -23,3 +23,10 @@ Feature: Login on app
     And I click on login button
     Then I am on the main page
 
+
+
+  Scenario: Close the popup from the main page
+    Given I am on the home page
+    When I click the cancel button
+    Then The popup is not visible
+

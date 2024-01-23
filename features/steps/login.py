@@ -40,3 +40,17 @@ def step_impl(context):
 def step_impl(context):
     assert context.login_page.get_url() == 'https://jules.app/search/all'
 
+
+@Given('I am on the home page')
+def step_impl(context):
+    assert context.login_page.get_url() == 'https://jules.app/search/all'
+
+
+@When('I click the cancel button')
+def step_impl(context):
+    context.login_page.click_cancel_button()
+
+
+@Then('The popup is not visible')
+def step_impl(context):
+    pass
