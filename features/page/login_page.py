@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-
+from time import sleep
 
 class Login_Page:
     URL = 'http://jules.app/'
@@ -25,6 +25,7 @@ class Login_Page:
     def click_login_button(self):
         login_button = self.driver.find_element(*self.LOGIN_BUTTON_SELECTOR)
         login_button.click()
+        sleep(5)
 
 
 
