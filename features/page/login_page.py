@@ -10,8 +10,14 @@ class Login_Page:
     POPUP_CANCEL_BUTTON_SELECTOR = (By.CSS_SELECTOR, 'button[id="onesignal-slidedown-cancel-button"]')
     ADD_BUTTON_SELECTOR = (By.CSS_SELECTOR, 'div[data-test-id="add-flows-navigation-button"]')
     PERSON_BUTTON_SELECTOR = (By.CSS_SELECTOR, 'div[data-test-id="person-wizard-tile"]')
-    FIRST_NAME_SELECTOR = (By.CSS_SELECTOR, '.MuiGrid-root.MuiGrid-container:nth-child(1)')
+    FIRST_NAME_SELECTOR = (By.CSS_SELECTOR, '.MuiGrid-root>.MuiGrid-container:nth-child(1)')
     SAVE_BUTTON_SELECTOR = (By.CSS_SELECTOR, 'button[data-test-id=item-details-step-save-item-button]')
+    LAST_NAME_SELECTOR = (By.CSS_SELECTOR, '.MuiGrid-root>.MuiGrid-container:nth-child(2)')
+    FINISH_BUTTON_SELECTOR = (By.CSS_SELECTOR, 'button[data-test-id="add-person-wizard-finish-button"]')
+    PEOPLE_BUTTON = (By.CSS_SELECTOR, 'div[data-test-id="people-navigation-button"]')
+    SELECT_BUTTON_SELECTOR = (By.CSS_SELECTOR, '.css-1e2fy0l>.ListItem:nth-child(1)')
+    DELETE_BUTTON_SELECTOR = (By.CSS_SELECTOR, 'div[data-test-id="batch-delete-button"]')
+    CONFIRM_DELETE_BUTTON_SELECTOR = (By.CSS_SELECTOR, 'button[data-test-id="batch-delete-dialog-delete-button"]')
 
     def __init__(self, browser):
         self.driver = browser.driver
@@ -30,7 +36,7 @@ class Login_Page:
     def click_login_button(self):
         login_button = self.driver.find_element(*self.LOGIN_BUTTON_SELECTOR)
         login_button.click()
-        sleep(5)
+        sleep(7)
 
     def get_url(self):
         return self.driver.current_url
@@ -57,3 +63,26 @@ class Login_Page:
         save_button = self.driver.find_element(*self.SAVE_BUTTON_SELECTOR)
         save_button.click()
 
+    def click_finish_button(self):
+        finish_button = self.driver.find_element(*self.FINISH_BUTTON_SELECTOR)
+        finish_button.click()
+
+    def input_last_name(self, lastname):
+        last_name_input = self.driver.find_element(*self.LAST_NAME_SELECTOR)
+        last_name_input.send_keys(lastname)
+
+    def click_people_button(self):
+        people_button = self.driver.find_element(*self.PEOPLE_BUTTON)
+        people_button.click()
+
+    def click_select_button(self):
+        select_button = self.driver.find_element(*self.SELECT_BUTTON_SELECTOR)
+        select_button.click()
+
+    def click_delete_button(self):
+        delete_button = self.driver.find_element(*self.DELETE_BUTTON_SELECTOR)
+        delete_button.click()
+
+    def click_confirm_delete_button(self):
+        confirm_delete_button = self.driver.find_element(*self.CONFIRM_DELETE_BUTTON_SELECTOR)
+        confirm_delete_button.click()

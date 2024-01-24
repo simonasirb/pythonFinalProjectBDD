@@ -81,6 +81,51 @@ def step_impl(context):
     context.login_page.click_save_button()
 
 
-@Then('The person was added')
+@Then('I click on finish button')
 def step_impl(context):
-    pass
+    context.login_page.click_finish_button()
+
+
+@When('I input last name')
+def step_impl(context):
+    context.login_page.input_last_name('Ion')
+
+
+@When('I input again first name')
+def step_impl(context):
+    context.login_page.input_first_name('Ionescu')
+
+
+@When('I input again last name')
+def step_impl(context):
+    context.login_page.input_last_name('George')
+
+
+@Given('I am on the initial page')
+def step_impl(context):
+    assert context.login_page.get_url() == 'https://jules.app/search/all'
+
+
+@When('I click the people button')
+def step_impl(context):
+    context.login_page.click_people_button()
+
+
+@Then('I see the list of people')
+def step_impl(context):
+    assert context.login_page.get_url() == 'https://jules.app/people'
+
+
+@Then('The I select the person to delete')
+def step_impl(context):
+    context.login_page.click_select_button()
+
+
+@Then('I click on delete button')
+def step_impl(context):
+    context.login_page.click_delete_button()
+
+
+@Then('I confirm delete person')
+def step_impl(context):
+    context.login_page.click_confirm_delete_button()
