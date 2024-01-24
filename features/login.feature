@@ -65,7 +65,7 @@ Feature: Login on app
 
 
   Scenario: Delete the first person added from the people list
-    Given I am on the initial page
+    Given I am on the people page
     When I click the people button
     Then The I select the person to delete
     And I click on delete button

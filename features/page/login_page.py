@@ -17,7 +17,7 @@ class Login_Page:
     LAST_NAME_SELECTOR = (By.XPATH, '(//input)[2]')
     FINISH_BUTTON_SELECTOR = (By.CSS_SELECTOR, 'button[data-test-id="add-person-wizard-finish-button"]')
     PEOPLE_BUTTON = (By.CSS_SELECTOR, 'div[data-test-id="people-navigation-button"]')
-    SELECT_BUTTON_SELECTOR = (By.CSS_SELECTOR, '.css-1e2fy0l>.ListItem:nth-child(1)')
+    SELECT_BUTTON_SELECTOR = (By.XPATH, '(//input)[4]')
     DELETE_BUTTON_SELECTOR = (By.CSS_SELECTOR, 'div[data-test-id="batch-delete-button"]')
     CONFIRM_DELETE_BUTTON_SELECTOR = (By.CSS_SELECTOR, 'button[data-test-id="batch-delete-dialog-delete-button"]')
 
@@ -58,14 +58,11 @@ class Login_Page:
         person_button.click()
 
     def input_first_name(self, firstname):
-        sleep(15)
         first_name_input = self.driver.find_element(*self.FIRST_NAME_SELECTOR)
-        driver.implicitly_wait(10)
         first_name_input.send_keys(firstname)
 
     def click_save_button(self):
         save_button = self.driver.find_element(*self.SAVE_BUTTON_SELECTOR)
-        sleep(15)
         save_button.click()
 
     def click_finish_button(self):

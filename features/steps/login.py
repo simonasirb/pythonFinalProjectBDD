@@ -103,8 +103,11 @@ def step_impl(context):
 
 @Given('I am on the initial page')
 def step_impl(context):
-    assert context.login_page.get_url() == 'https://jules.app/people'
+    assert context.login_page.get_url() == 'https://jules.app/search/all'
 
+@Given('I am on the people page')
+def step_impl(context):
+    assert context.login_page.get_url() == 'https://jules.app/people'
 
 @When('I click the people button')
 def step_impl(context):
