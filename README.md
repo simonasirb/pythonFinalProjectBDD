@@ -4,7 +4,7 @@ Application Under Test: Jules.app
 Jules.app is a comprehensive online service designed to serve both homeowners and real estate companies. It encompasses a wide range of functionalities, catering to the diverse needs of its users. Each Jules service utilizes a vast database that houses information about homes, their associated properties, and the personal details of their residents.
 
 Testing Methodology
-Markdown
+
 ## Technologies Used
 
 * Python
