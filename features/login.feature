@@ -26,7 +26,17 @@ Feature: Login on app
 
 
   Scenario: Close the popup from the main page
-    Given I am on the home page
+    Given I am on the start page
     When I click the cancel button
     Then The popup is not visible
+
+
+    Scenario: Add person with first name
+      Given I am on the home page
+      When I click on add button from menu
+      And I click on person button
+      And I input first name
+      And I click on save button
+      Then The person was added
+
 

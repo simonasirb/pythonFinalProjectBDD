@@ -54,3 +54,33 @@ def step_impl(context):
 @Then('The popup is not visible')
 def step_impl(context):
     pass
+
+
+@Given('I am on the start page')
+def step_impl(context):
+    assert context.login_page.get_url() == 'https://jules.app/search/all'
+
+
+@When('I click on add button from menu')
+def step_impl(context):
+    context.login_page.click_add_button()
+
+
+@When('I click on person button')
+def step_impl(context):
+    context.login_page.click_person_button()
+
+
+@When('I input first name')
+def step_impl(context):
+    context.login_page.input_first_name('Popescu')
+
+
+@When('I click on save button')
+def step_impl(context):
+    context.login_page.click_save_button()
+
+
+@Then('The person was added')
+def step_impl(context):
+    pass
