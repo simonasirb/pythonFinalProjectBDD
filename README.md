@@ -9,7 +9,7 @@ Markdown
 
 * Python
 * PyCham IDE
-Folosește codul cu precauție. Află mai multe
+
 Test Scenarios Employed:
 
 Markdown
