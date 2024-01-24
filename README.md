@@ -17,7 +17,7 @@ To ensure successful application execution, please fulfill the following prerequ
 ### Prerequisite 1: Python 3.12
 
 Verify Python Version:
-python --version
+> python --version
 
 If the output displays a valid Python version (3.12 or later), Python is already installed and no further action is required. Otherwise, update python from the official website: https://www.python.org/downloads/
 
@@ -25,7 +25,7 @@ If the output displays a valid Python version (3.12 or later), Python is already
 
 Check pip Installation
 
-pip --version
+> pip --version
 
 If the output shows a pip version, pip is installed and no further action is necessary. Otherwise, proceed to the installation the latest version of pip using the official source: https://pypi.org/project/pip/
 
@@ -45,3 +45,9 @@ Create a Virtual Environment
 * Viewing Added People List
 * Deleting First Added Person
 * Logout
+
+## Generating the report for the tests
+
+You can run the tests and generate a report for them using the command:
+
+> behave -f html -o report.html
