@@ -10,18 +10,38 @@ Markdown
 * Python
 * PyCham IDE
 
-Test Scenarios Employed:
+## Essential Requirements
+Essential Requirements
+To ensure successful application execution, please fulfill the following prerequisites:
 
-Markdown
-## Test Scenarios
+### Prerequisite 1: Python 3.12
 
-### Invalid Password Login
-### Invalid Username Login
-### Successful Login
-### Main Page Popup Closure
-### Adding a Person with First Name
-### Adding a Person with Last Name
-### Adding a Person with Complete Name
-### Viewing Added People List
-### Deleting First Added Person
-### Logout
+Verify Python Version:
+python --version
+
+If the output displays a valid Python version (3.12 or later), Python is already installed and no further action is required. Otherwise, update python from the official website: https://www.python.org/downloads/
+
+### Prerequisite 2: pip
+
+Check pip Installation
+
+pip --version
+
+If the output shows a pip version, pip is installed and no further action is necessary. Otherwise, proceed to the installation the latest version of pip using the official source: https://pypi.org/project/pip/
+
+### Prerequisite 3: venv (Virtual Environment)
+Create a Virtual Environment
+
+
+## Test Scenarios Employed:
+
+* Invalid Password Login
+* Invalid Username Login
+* Successful Login
+* Main Page Popup Closure
+* Adding a Person with First Name
+* Adding a Person with Last Name
+* Adding a Person with Complete Name
+* Viewing Added People List
+* Deleting First Added Person
+* Logout
